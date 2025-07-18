@@ -1,0 +1,45 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Environment variables
+.env
+*.env
+
+# macOS files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Python dependencies
+*.egg-info/
+dist/
+build/
+
+# Flask specific
+instance/
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Mypy, coverage, other tools
+.mypy_cache/
+.coverage
+htmlcov/
+
+# System files
+Thumbs.db
