@@ -7,11 +7,11 @@ __pycache__/
 
 # Virtual environment
 venv/
-.env/
+.venv/
 .venv/
 
 # Environment variables
-.env
+.venv
 *.env
 
 # macOS files
