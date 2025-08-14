@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Portfolio{% endblock %}</title>
+
+    <!-- CoreUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui/dist/css/coreui.min.css" rel="stylesheet">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="c-app">
+
+    <!-- Sidebar -->
+    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+        <div class="c-sidebar-brand">
+            <h2>Mon Portfolio</h2>
+        </div>
+        <ul class="c-sidebar-nav">
+            <li class="c-sidebar-nav-item">
+                <a class="c-sidebar-nav-link" href="{{ url_for('main.index') }}">Accueil</a>
+            </li>
+            <li class="c-sidebar-nav-item">
+                <a class="c-sidebar-nav-link" href="{{ url_for('main.projets') }}">Projets</a>
+            </li>
+            <li class="c-sidebar-nav-item">
+                <a class="c-sidebar-nav-link" href="{{ url_for('main.contact') }}">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="c-wrapper">
+        <!-- Header -->
+        <header class="c-header c-header-light c-header-fixed">
+            <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+                <span class="c-header-toggler-icon"></span>
+            </button>
+            <h3 class="m-0">Bienvenue</h3>
+        </header>
+
+        <!-- Page content -->
+        <div class="c-body">
+            <main class="c-main">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="c-footer">
+            <div>© 2025 Mon Nom</div>
+        </footer>
+    </div>
+
+    <!-- CoreUI JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+    <!-- JS personnalisé -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

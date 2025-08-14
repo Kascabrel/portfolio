@@ -3,13 +3,13 @@ name = "my-portfolio"
 version = "0.1.0"
 description = "a simple site to talk about me and my experiences. develllop using python flask and jinja template"
 authors = [
-    {name = "Kascabrel",email = "+Kascabr107616396el@users.noreply.github.com"}
+    { name = "Kascabrel", email = "+Kascabr107616396el@users.noreply.github.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "requests (>=2.32.4,<3.0.0)",
-    "flask (>=3.1.1,<4.0.0)",
+    "flask (>=2.3.3,<3.0.0)",
     "dotenv (>=0.9.9,<0.10.0)"
 ]
 
