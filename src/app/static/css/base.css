@@ -1,0 +1,9 @@
+.navbar {
+    z-index: 1030; /* Bootstrap fixed-top par défaut */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* évite les scrolls horizontaux */
+}
