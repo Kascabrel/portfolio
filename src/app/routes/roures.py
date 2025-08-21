@@ -1,4 +1,4 @@
-from flask import redirect, url_for
+from flask import redirect, url_for, render_template
 from flask import Blueprint
 
 portfolio = Blueprint('portfolio', __name__)
@@ -12,7 +12,7 @@ def index():
 @portfolio.route('/home')
 def home():
     # return render_template(welcome.html)
-    return "home"
+    return render_template('index.html')
 
 
 @portfolio.route('/about')
