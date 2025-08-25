@@ -35,22 +35,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{url_for('portfolio.home')}}">Home</a>
+                        <a class="nav-link {{ 'active' if current_page == 'home' else '' }}" aria-current="page" href="{{url_for('portfolio.home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('portfolio.about')}}">About</a>
+                        <a class="nav-link {{ 'active' if current_page == 'about' else '' }}" href="{{url_for('portfolio.about')}}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('portfolio.projects')}}">Projects</a>
+                        <a class="nav-link {{ 'active' if current_page == 'projects' else '' }}" href="{{url_for('portfolio.projects')}}">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('portfolio.skills')}}">Skills</a>
+                        <a class="nav-link {{ 'active' if current_page == 'skills' else '' }}" href="{{url_for('portfolio.skills')}}">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('portfolio.experience')}}">Experience</a>
+                        <a class="nav-link {{ 'active' if current_page == 'experience' else '' }}" href="{{url_for('portfolio.experience')}}">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('portfolio.contact') }}">Contact</a>
+                        <a class="nav-link {{ 'active' if current_page == 'contact' else '' }}" href="{{ url_for('portfolio.contact') }}">Contact</a>
                     </li>
                 </ul>
 
