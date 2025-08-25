@@ -39,3 +39,13 @@ def contact():
         return redirect(url_for("portfolio.contact"))
 
     return render_template("contact.html")
+
+
+@portfolio.route('/about')
+def skills():
+    return render_template("skills.html")
+
+
+@portfolio.route('/about')
+def experience():
+    return render_template("experience.html")
