@@ -17,12 +17,12 @@ def home():
 
 @portfolio.route('/about')
 def about():
-    return "about"
+    return redirect( url_for("portfolio.home") + "#about")
 
 
-@portfolio.route('/project')
+@portfolio.route('/projects')
 def projects():
-    return "project"
+    return render_template("project.html")
 
 
 @portfolio.route("/contact", methods=["GET", "POST"])
@@ -41,11 +41,11 @@ def contact():
     return render_template("contact.html")
 
 
-@portfolio.route('/about')
+@portfolio.route('/skills')
 def skills():
     return render_template("skills.html")
 
 
-@portfolio.route('/about')
+@portfolio.route('/experience')
 def experience():
     return render_template("experience.html")
