@@ -21,7 +21,7 @@
         <!-- Buttons -->
         <div class="mt-4">
             <a href="#projects" class="btn btn-secondary btn-lg me-3">View My projects</a>
-            <a href="#contact" class="btn btn-dark btn-lg" style="opacity: 0.85;">Contact Me</a>
+            <a href="#about" class="btn btn-dark btn-lg" style="opacity: 0.85;">About Me</a>
         </div>
 
         <!-- Optional social icons -->
@@ -38,8 +38,8 @@
         </div>
         <!-- Scroll Down Arrow with Text -->
         <div class="scroll-down mt-5 text-center">
-            <p class="mb-1 text-white small text-primary">About Me</p>
-            <a href="#about" class="text-white">
+            <p class="mb-0 text-white small text-primary">Click to start</p>
+            <a href="#info" class="text-white">
                 <i class="bi bi-chevron-down fs-1"></i>
             </a>
         </div>
@@ -50,7 +50,7 @@
 
 <!-- Extra Info Section -->
 <section>
-    <div class="container mt-5">
+    <div class=" container mt-5" id="info">
         <div class="text-center mb-4">
             <p class="lead">
                 Want to know more about me or my projects?
@@ -59,8 +59,24 @@
         </div>
 
         <div class="row text-center g-4">
+
+            <!-- Education & Experience -->
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <i class="bi bi-mortarboard fs-2 text-success"></i>
+                        <h6 class="mt-2 fw-bold">Education & Experience</h6>
+                        <p class="small text-muted">
+                            B.Eng. Software Development, currently at Volkswagen
+                            Infotainment
+                        </p>
+                        <a href="#about" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Projects and challenges -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
                         <i class="bi bi-lightbulb fs-2 text-warning"></i>
@@ -73,7 +89,7 @@
             </div>
 
             <!-- Programming Languages -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
                         <i class="bi bi-code-slash fs-2 text-primary"></i>
@@ -84,7 +100,7 @@
             </div>
 
             <!-- Diplomas & Certifications -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
                         <i class="bi bi-award fs-2 text-success"></i>
@@ -112,16 +128,42 @@
                 <img src="static/images/profile.jpg" alt="Profile Photo"
                      class="img-fluid shadow mb-4">
 
-                <!-- Logos -->
-                <div class="d-flex justify-content-evenly align-items-center w-100">
-                    <img src="static/images/logo-dit.jpg" alt="Douala Institute of Technology"
-                         class="rounded-circle shadow" style="max-width: 60px; height: 60px; object-fit: cover;">
-                    <img src="static/images/logo-cinaf.jpg" alt="Cinaf TV"
-                         class="rounded-circle shadow" style="max-width: 60px; height: 60px; object-fit: cover;">
-                    <img src="static/images/logo-vw.png" alt="VW Infotainment"
-                         class="rounded-circle shadow" style="max-width: 60px; height: 60px; object-fit: cover;">
+                <!-- Logos with text links (fixed spacing using row/col) -->
+                <div class="row text-center align-items-center">
+                    <!-- DIT -->
+                    <div class="col">
+                        <img src="static/images/logo-dit.jpg" alt="Douala Institute of Technology"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://www.dit.cm" target="_blank"
+                           class="text-decoration-none fw-semibold text-dark d-block">
+                            Douala Institute of Technology
+                        </a>
+                    </div>
 
+                    <!-- Cinaf TV -->
+                    <div class="col">
+                        <img src="static/images/logo-cinaf.jpg" alt="Cinaf TV"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://www.cinaf.tv" target="_blank"
+                           class="text-decoration-none fw-semibold text-dark d-block">
+                            Cinaf TV (Streaming company)
+                        </a>
+                    </div>
+
+                    <!-- VW Infotainment -->
+                    <div class="col">
+                        <img src="static/images/logo-vw.png" alt="VW Infotainment"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://www.volkswagen.com" target="_blank"
+                           class="text-decoration-none fw-semibold text-dark d-block">
+                            VW Infotainment (Automotive)
+                        </a>
+                    </div>
                 </div>
+
 
             </div>
 
@@ -157,13 +199,7 @@
             </div>
         </div>
     </div>
-    <!-- Scroll to Top -->
-    <div class="col-md-3 d-flex flex-column align-items-end">
-        <a href="#top" class="btn btn-outline-primary rounded-circle shadow-sm" title="Back to top">
-            <i class="bi bi-arrow-up fs-3"></i>
-        </a>
-        <p class="mt-2 fw-semibold text-end">Back to Top</p>
-    </div>
+
 </section>
 
 {% endblock %}
