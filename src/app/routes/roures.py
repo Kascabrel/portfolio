@@ -41,7 +41,7 @@ def contact():
         session['current_page'] = 'contacts'
         return redirect(url_for("portfolio.contact"))
 
-    return render_template("contact.html", current_page="contact")
+    return render_template("contact.html", current_page="contact ")
 
 
 @portfolio.route('/skills')
