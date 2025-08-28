@@ -1,19 +1,18 @@
 [project]
 name = "my-portfolio"
 version = "0.1.0"
-description = "a simple site to talk about me and my experiences. develllop using python flask and jinja template"
+description = "A simple site to talk about me and my experiences. Developed using Python Flask and Jinja templates."
 authors = [
     { name = "Kascabrel", email = "+Kascabr107616396el@users.noreply.github.com" }
 ]
-readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "requests (>=2.32.4,<3.0.0)",
-    "flask (>=2.3.3,<3.0.0)",
-    "dotenv (>=0.9.9,<0.10.0)"
+    "requests>=2.32.4,<3.0.0",
+    "flask>=2.3.3,<3.0.0",
+    "python-dotenv>=1.1.1,<2.0.0",
+    "gunicorn (>=23.0.0,<24.0.0)"
 ]
 
-
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=65.0.0","wheel"]
+build-backend = "setuptools.build_meta"
