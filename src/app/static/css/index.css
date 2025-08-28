@@ -18,3 +18,15 @@
     position: relative;
     z-index: 2;
 }
+/* Makes the links visually clear and interactive */
+.link-hover {
+    color: #0d6efd; /* Bootstrap primary color */
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.link-hover:hover {
+    color: #0a58ca;  /* darker blue on hover */
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
