@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- ===== Hero Section ===== -->
-<section id="home" class="d-flex align-items-center w-100"
+<section id="home" class="d-flex align-items-center w-100 "
          style="height: 100vh;
                 width: 100vw;
                 background: url('{{ url_for('static', filename='images/hero.jpg') }}') center/cover no-repeat;
@@ -20,27 +20,27 @@
 
         <!-- Buttons -->
         <div class="mt-4">
-            <a href="#projects" class="btn btn-secondary btn-lg me-3">View My projects</a>
-            <a href="#about" class="btn btn-dark btn-lg" style="opacity: 0.85;">About Me</a>
+            <a href="{{url_for('portfolio.about')}}" class="btn btn-dark btn-lg" style="opacity: 0.85;">About Me</a>
+            <a href="{{url_for('portfolio.projects')}}" class="btn btn-dark btn-lg me-3">My projects</a>
         </div>
 
         <!-- Optional social icons -->
         <div class="mt-5 fs-3">
-            <a href="https://github.com/username" target="_blank" class="me-3 text-white">
+            <a href="https://github.com/Kascabrel" target="_blank" class="me-3 text-white">
                 <i class="bi bi-github"></i>
             </a>
-            <a href="https://linkedin.com/in/username" target="_blank" class="me-3 text-primary">
+            <a href="https://www.linkedin.com/in/steve-kamguia-144989257/" target="_blank" class="me-3 text-primary">
                 <i class="bi bi-linkedin"></i>
             </a>
             <a href="mailto:kascabrel@gmail.com" class="text-danger">
                 <i class="bi bi-envelope-fill"></i>
             </a>
         </div>
-        <!-- Scroll Down Arrow with Text -->
+        <!-- Scroll Down Button -->
         <div class="scroll-down mt-5 text-center">
-            <p class="mb-0 text-white small text-primary">Click to start</p>
-            <a href="#info" class="text-white">
-                <i class="bi bi-chevron-down fs-1"></i>
+            <a href="#nav-card" class="btn-scroll">
+                <span>Click to start</span>
+                <i class="bi bi-chevron-down"></i>
             </a>
         </div>
 
@@ -49,11 +49,12 @@
 </section>
 
 <!-- Extra Info Section -->
-<section>
-    <div class=" container mt-5" id="info">
-        <div class="text-center mb-4">
-            <p class="lead">
-                Want to know more about me or my projects?
+<section id="nav-card" class="mb-2">
+    <div class=" container mt-5">
+        <h3 class="title-underline">Hi,</h3>
+        <div class="text-center mb-5">
+            <p class="lead my-4">
+                Want to know about me or my projects?
                 Feel free to explore the following sections:
             </p>
         </div>
@@ -109,96 +110,6 @@
                     </div>
                 </div>
             </div>
-
-</section>
-
-<!-- About me section-->
-<section id="about" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="fw-bold mb-3 position-relative d-inline-block">
-            About Me
-            <span class="d-block mx-auto mt-2"
-                  style="width: 60px; height: 3px; background-color: #0d6efd; border-radius: 2px;"></span>
-        </h2>
-
-        <div class="row align-items-center">
-            <!-- Profile Photo -->
-            <div class="col-md-4 text-center mb-4 mb-md-0 d-flex flex-column justify-content-center">
-                <!-- Photo -->
-                <img src="static/images/profile.jpg" alt="Profile Photo"
-                     class="img-fluid shadow mb-4">
-
-                <!-- Logos with text links (fixed spacing using row/col) -->
-                <div class="row text-center align-items-center">
-                    <!-- DIT -->
-                    <div class="col">
-                        <img src="static/images/logo-dit.jpg" alt="Douala Institute of Technology"
-                             class="rounded-circle shadow mb-2"
-                             style="max-width: 60px; height: 60px; object-fit: cover;">
-                        <a href="https://douala-it.com/" target="_blank"
-                           class="fw-semibold d-block link-hover">
-                            Douala Institute of Technology
-                        </a>
-                    </div>
-
-                    <!-- Cinaf TV -->
-                    <div class="col">
-                        <img src="static/images/logo-cinaf.jpg" alt="Cinaf TV"
-                             class="rounded-circle shadow mb-2"
-                             style="max-width: 60px; height: 60px; object-fit: cover;">
-                        <a href="https://cinaf.tv/fr/" target="_blank"
-                           class="fw-semibold d-block link-hover">
-                            Cinaf TV (Streaming company)
-                        </a>
-                    </div>
-
-                    <!-- VW Infotainment -->
-                    <div class="col">
-                        <img src="static/images/logo-vw.png" alt="VW Infotainment"
-                             class="rounded-circle shadow mb-2"
-                             style="max-width: 60px; height: 60px; object-fit: cover;">
-                        <a href="https://www.volkswagen-infotainment.com/de.html" target="_blank"
-                           class="fw-semibold d-block link-hover">
-                            VW Infotainment (Automotive)
-                        </a>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- About Text -->
-            <div class="col-md-8">
-                <h4 class="fw-bold mb-3">My profile</h4>
-                <p class="lead">
-                    Hi, I’m a passionate developer with a strong motivation to build
-                    impactful digital solutions. My very first steps into programming
-                    started back in high school, where I discovered <strong>Arduino (C/C++)</strong>.
-                    That curiosity pushed me to study <strong>Software Engineering</strong> at
-                    <em>Douala Institute of Technology</em>.
-                </p>
-                <p class="lead">
-                    In 2023, I successfully earned my <strong>Bachelor of Engineering in Software Development</strong>
-                    from <em>Douala Institute of Technology (DIT)</em>.
-                </p>
-                <p class="lead">
-                    During my studies, I had the chance to complete a
-                    <strong>mobile application development internship</strong> at Cinaf-TV in Cameroon,
-                    which gave me practical experience and strengthened my passion for creating software.
-                </p>
-                <p class="lead">
-                    Later in 2023, I started my career at
-                    <em>Volkswagen Infotainment GmbH in Bochum</em> as an
-                    <strong>Apprentice Software Developer</strong>, where I focus on
-                    <strong>software development</strong> and <strong>testing</strong>.
-                </p>
-                <p class="lead">
-                    I enjoy solving problems, writing clean code, and constantly
-                    learning to improve both as a developer and as a person.
-                </p>
-            </div>
-        </div>
-    </div>
 
 </section>
 

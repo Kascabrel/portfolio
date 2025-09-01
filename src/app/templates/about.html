@@ -1,3 +1,96 @@
 {% extends "base.html" %}
 
 {% block title %}About{% endblock %}
+
+{% block content %}
+<!-- About me section-->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold mb-3 position-relative d-inline-block">
+            About Me
+            <span class="d-block mx-auto mt-2"
+                  style="width: 60px; height: 3px; background-color: #0d6efd; border-radius: 2px;"></span>
+        </h2>
+
+        <div class="row align-items-center">
+            <!-- Profile Photo -->
+            <div class="col-md-4 text-center mb-4 mb-md-0 d-flex flex-column justify-content-center">
+                <!-- Photo -->
+                <img src="static/images/profile.jpg" alt="Profile Photo"
+                     class="img-fluid shadow mb-4">
+
+                <!-- Logos with text links (fixed spacing using row/col) -->
+                <div class="row text-center align-items-center">
+                    <!-- DIT -->
+                    <div class="col">
+                        <img src="static/images/logo-dit.jpg" alt="Douala Institute of Technology"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://douala-it.com/" target="_blank"
+                           class="fw-semibold d-block link-hover">
+                            Douala Institute of Technology
+                        </a>
+                    </div>
+
+                    <!-- Cinaf TV -->
+                    <div class="col">
+                        <img src="static/images/logo-cinaf.jpg" alt="Cinaf TV"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://cinaf.tv/fr/" target="_blank"
+                           class="fw-semibold d-block link-hover">
+                            Cinaf TV (Streaming company)
+                        </a>
+                    </div>
+
+                    <!-- VW Infotainment -->
+                    <div class="col">
+                        <img src="static/images/logo-vw.png" alt="VW Infotainment"
+                             class="rounded-circle shadow mb-2"
+                             style="max-width: 60px; height: 60px; object-fit: cover;">
+                        <a href="https://www.volkswagen-infotainment.com/de.html" target="_blank"
+                           class="fw-semibold d-block link-hover">
+                            VW Infotainment (Automotive)
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- About Text -->
+            <div class="col-md-8">
+                <h4 class="fw-bold mb-3 title-underline">My profile</h4>
+                <p class="lead">
+                    Hi, I’m a passionate developer with a strong motivation to build
+                    impactful digital solutions. My very first steps into programming
+                    started back in high school, where I discovered <strong>Arduino (C/C++)</strong>.
+                    That curiosity pushed me to study <strong>Software Engineering</strong> at
+                    <em>Douala Institute of Technology</em>.
+                </p>
+                <p class="lead">
+                    In 2023, I successfully earned my <strong>Bachelor of Engineering in Software Development</strong>
+                    from <em>Douala Institute of Technology (DIT)</em>.
+                </p>
+                <p class="lead">
+                    During my studies, I had the chance to complete a
+                    <strong>mobile application development internship</strong> at Cinaf-TV in Cameroon,
+                    which gave me practical experience and strengthened my passion for creating software.
+                </p>
+                <p class="lead">
+                    Later in 2023, I started my career at
+                    <em>Volkswagen Infotainment GmbH in Bochum</em> as an
+                    <strong>Apprentice Software Developer</strong>, where I focus on
+                    <strong>software development</strong> and <strong>testing</strong>.
+                </p>
+                <p class="lead">
+                    I enjoy solving problems, writing clean code, and constantly
+                    learning to improve both as a developer and as a person.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
