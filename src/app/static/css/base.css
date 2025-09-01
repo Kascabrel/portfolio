@@ -1,9 +1,20 @@
 .navbar {
-    z-index: 1030; /* Bootstrap fixed-top par défaut */
+    z-index: 1030; /* Bootstrap fixed-top by default */
 }
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* évite les scrolls horizontaux */
+    overflow-x: hidden; /* avoid horizontal scrolls  */
+}
+
+.nav-link {
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-active {
+    border-bottom: 3px solid #0d6efd; /* Bootstrap blu */
+    font-weight: bold; /* text bigger */
+    color: #0d6efd !important; /* blu text */
 }

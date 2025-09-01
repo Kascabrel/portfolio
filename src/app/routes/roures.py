@@ -11,20 +11,29 @@ def index():
 
 @portfolio.route('/home')
 def home():
-    if not session.get('current_page'):
-        return render_template('index.html', current_page='home')
-    return render_template('index.html', current_page=session.get('current_page'))
+    return render_template('index.html', current_page='home')
 
 
 @portfolio.route('/about')
 def about():
-    session['current_page'] = 'about'
-    return redirect(url_for("portfolio.home") + "#about")
+    return render_template("about.html", current_page='about')
 
 
 @portfolio.route('/projects')
 def projects():
     return render_template("project.html", current_page='projects')
+
+
+"""@portfolio.route('/skills')
+def skills():
+    return render_template("skills.html", current_page='skills')
+
+
+@portfolio.route('/experience')
+def experience():
+    return render_template("experience.html", current_page='experience')
+
+"""
 
 
 @portfolio.route("/contact", methods=["GET", "POST"])
@@ -38,17 +47,7 @@ def contact():
         print(f"New message from {name} ({email}): {message}")
 
         flash("Thank you for your message! I will get back to you soon.", "success")
-        session['current_page'] = 'contacts'
+        session['current_page'] = 'contact'
         return redirect(url_for("portfolio.contact"))
 
-    return render_template("contact.html", current_page="contact ")
-
-
-@portfolio.route('/skills')
-def skills():
-    return render_template("skills.html", current_page='skills')
-
-
-@portfolio.route('/experience')
-def experience():
-    return render_template("experience.html", current_page='experience')
+    return render_template("contact.html", current_page="contact")
