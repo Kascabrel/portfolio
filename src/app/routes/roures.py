@@ -24,7 +24,7 @@ def projects():
     return render_template("project.html", current_page='projects')
 
 
-@portfolio.route('/skills')
+"""@portfolio.route('/skills')
 def skills():
     return render_template("skills.html", current_page='skills')
 
@@ -32,6 +32,8 @@ def skills():
 @portfolio.route('/experience')
 def experience():
     return render_template("experience.html", current_page='experience')
+
+"""
 
 
 @portfolio.route("/contact", methods=["GET", "POST"])
