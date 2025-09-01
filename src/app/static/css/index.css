@@ -6,18 +6,23 @@
     position: relative;
     padding-top: 70px; /* hauteur approximative de la navbar */
 }
+
 #home::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.2); /* overlay sombre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* overlay sombre */
     z-index: 1;
 }
+
 #home .container-fluid {
     position: relative;
     z-index: 2;
 }
+
 /* Makes the links visually clear and interactive */
 .link-hover {
     color: #0d6efd; /* Bootstrap primary color */
@@ -26,7 +31,54 @@
 }
 
 .link-hover:hover {
-    color: #0a58ca;  /* darker blue on hover */
+    color: #0a58ca; /* darker blue on hover */
     text-decoration: underline;
     transform: translateY(-2px);
+}
+
+.title-underline { /* for the underline style of title */
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title-underline::after {
+    content: "";
+    display: block;
+    width: 60px; /* width of the underline */
+    height: 3px; /* height */
+    background-color: #0d6efd; /* bleu bootstrap */
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+}
+
+/* The scroll button of the hero section */
+.btn-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #0d6efd, #3b82f6);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-scroll i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-scroll:hover {
+    background: linear-gradient(135deg, #0b5ed7, #2563eb);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-scroll:hover i {
+    transform: translateY(4px);
 }
