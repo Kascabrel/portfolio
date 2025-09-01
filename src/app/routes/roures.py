@@ -47,7 +47,7 @@ def contact():
         print(f"New message from {name} ({email}): {message}")
 
         flash("Thank you for your message! I will get back to you soon.", "success")
-        session['current_page'] = 'contacts'
+        session['current_page'] = 'contact'
         return redirect(url_for("portfolio.contact"))
 
-    return render_template("contact.html", current_page="contact ")
+    return render_template("contact.html", current_page="contact")

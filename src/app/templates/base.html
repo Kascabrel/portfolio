@@ -35,19 +35,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active' if current_page == 'home' else '' }}" aria-current="page"
+                        <a class="nav-link {{ 'active nav-active' if current_page == 'home' else '' }}" aria-current="page"
                            href="{{url_for('portfolio.home')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active' if current_page == 'about' else '' }}"
+                        <a class="nav-link {{ 'active nav-active' if current_page == 'about' else '' }}"
                            href="{{url_for('portfolio.about')}}">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active' if current_page == 'projects' else '' }}"
+                        <a class="nav-link {{ 'active nav-active' if current_page == 'projects' else '' }}"
                            href="{{url_for('portfolio.projects')}}">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active' if current_page == 'contact' else '' }}"
+                        <a class="nav-link {{ 'active nav-active' if current_page == 'contact' else '' }}"
                            href="{{ url_for('portfolio.contact') }}">Contact</a>
                     </li>
                 </ul>
