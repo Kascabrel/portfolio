@@ -26,12 +26,15 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-portfolio:latest
 
-      - name: Deploy APK via SSH
-        uses: appleboy/ssh-action@v0.1.6
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            mkdir -p ~/nginx-apk/apk/BK-Witten
-            cp frontend/build/app/outputs/flutter-apk/app-release.apk ~/nginx-apk/apk/BK-Witten/app-release.apk
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-portfolio:latest
+            docker stop my-portfolio || true
+            docker rm my-portfolio || true
+            docker run -d -p 5200:5200 --restart unless-stopped --name my-portfolio ${{ secrets.DOCKERHUB_USERNAME }}/my-portfolio:latest
+            docker image prune -f
