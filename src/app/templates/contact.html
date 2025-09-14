@@ -1,54 +1,59 @@
 {% extends "base.html" %}
-{% block content %}
 
+{% block content %}
 <section id="contact" class="py-5" style="background-color: #f8f9fa;">
     <div class="container">
+        <!-- Title -->
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Contact Me</h2>
-            <p class="text-muted">Have a project in mind or just want to say hello? Feel free to reach out!</p>
+            <h2 class="fw-bold display-5">Contact Me</h2>
+            <p class="text-muted fs-5">Have a project in mind or just want to say hello? Feel free to reach out!</p>
         </div>
 
         <div class="row justify-content-center">
             <!-- Contact Form -->
             <div class="col-md-8">
-                <form method="POST" action="{{ url_for('portfolio.contact') }}">
+                <form method="POST" action="{{ url_for('portfolio.contact') }}" class="p-4 bg-white rounded shadow-sm">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                        <label for="name" class="form-label fw-semibold">Your Name</label>
+                        <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="John Doe" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label">Your Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="example@mail.com"
-                               required>
+                        <label for="email" class="form-label fw-semibold">Your Email</label>
+                        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="example@mail.com" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="message" class="form-label">Your Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5"
-                                  placeholder="Write your message..." required></textarea>
+                        <label for="message" class="form-label fw-semibold">Your Message</label>
+                        <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-dark btn-lg">Send Message</button>
+                        <button type="submit" class="btn btn-dark btn-lg rounded-pill shadow-sm">Send Message</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <!-- Optional: Contact Info -->
-        <div class="row text-center mt-5">
-            <div class="col-md-4">
-                <i class="bi bi-envelope-fill fs-2 text-danger"></i>
-                <p class="mt-2">kascabrel@gmail.com</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-linkedin fs-2 text-primary"></i>
-                <p class="mt-2"><a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-github fs-2 text-dark"></i>
-                <p class="mt-2"><a href="https://github.com/username" target="_blank">GitHub</a></p>
+        <!-- Contact Info -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-10">
+                <div class="d-flex justify-content-around flex-wrap">
+                    <a href="mailto:kascabrel@gmail.com" class="contact-card text-decoration-none text-dark d-flex align-items-center mb-3 p-3 rounded shadow-sm" style="transition: transform 0.2s;">
+                        <i class="bi bi-envelope-fill fs-2 text-danger me-3"></i>
+                        <span class="fs-5">kascabrel@gmail.com</span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/username" target="_blank" class="contact-card text-decoration-none text-dark d-flex align-items-center mb-3 p-3 rounded shadow-sm" style="transition: transform 0.2s;">
+                        <i class="bi bi-linkedin fs-2 text-primary me-3"></i>
+                        <span class="fs-5">LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/username" target="_blank" class="contact-card text-decoration-none text-dark d-flex align-items-center mb-3 p-3 rounded shadow-sm" style="transition: transform 0.2s;">
+                        <i class="bi bi-github fs-2 text-dark me-3"></i>
+                        <span class="fs-5">GitHub</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
