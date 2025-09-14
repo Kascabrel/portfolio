@@ -1,1 +1,13 @@
 {% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="mb-3">🚧 Work in Progress</h1>
+    <p>My projects are not yet available here, but I'm actively working on them.</p>
+    <p>Stay tuned — exciting things are coming soon! ✨</p>
+    <img src="{{ url_for('static', filename='images/under_construction.png') }}"
+         alt="Under Construction"
+         class="img-fluid mt-4"
+         style="max-width: 300px;">
+</div>
+{% endblock %}
