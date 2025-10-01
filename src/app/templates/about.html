@@ -4,212 +4,273 @@
 
 {% block content %}
 <section id="about" class="py-5 bg-light">
-  <div class="container">
+    <div class="container">
 
-    <!-- Title -->
-    <h2 class="fw-bold mb-5 text-center position-relative d-inline-block">
-      About Me
-      <span class="d-block mx-auto mt-2"
-            style="width: 60px; height: 3px; background-color: #0d6efd; border-radius: 2px;"></span>
-    </h2>
+        <!-- Title -->
+        <h2 class="fw-bold mb-5 text-center position-relative d-inline-block">
+            About Me
+            <span class="d-block mx-auto mt-2"
+                  style="width: 60px; height: 3px; background-color: #0d6efd; border-radius: 2px;"></span>
+        </h2>
 
-    <!-- Intro -->
-    <div class="row align-items-center mb-5">
-      <!-- Photo -->
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <img src="{{ url_for('static', filename='images/Steve-Kamguia-Image.jpg') }}"
-             alt="Profile Photo"
-             class="rounded-circle shadow"
-             style="width: 220px; height: 220px; object-fit: cover;">
-      </div>
-      <!-- Text -->
-      <div class="col-md-8">
-        <h3 class="fw-bold mb-3">Steve Kamguia</h3>
-        <p class="lead">
-          I am a <strong>software developer</strong> passionate about
-          <strong>software engineering, IoT, and automation</strong>.
-          My journey started with <em>Arduino & C/C++</em> in high school,
-          then a <strong>Bachelor in Software Engineering (DIT, 2022)</strong>,
-          and continued through hands-on experiences at
-          <a class="custom-link" href="https://cinaf.tv/fr/" target="_blank">Cinaf TV</a>
-          and <a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html" target="_blank">Volkswagen Infotainment GmbH</a>.
-        </p>
-        <p class="lead mb-0">
-          I value <strong>clean code, problem solving, and continuous learning</strong> —
-          always aiming to grow as a developer and as a person.
-        </p>
-      </div>
-    </div>
-
-    <!-- Skills -->
-    <div class="mb-5">
-      <h4 class="fw-bold mb-4 text-center title-underline">Skills & Technical Stack</h4>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="fw-bold">Programming & Backend</h5>
-              <p class="mb-1">Python, PHP, C/C++, TypeScript (basic), C# (basic)</p>
-              <p class="mb-0">Flask, Laravel</p>
+        <!-- Intro -->
+        <div class="row align-items-center mb-5">
+            <!-- Photo -->
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="{{ url_for('static', filename='images/Steve-Kamguia-Image.jpg') }}"
+                     alt="Profile Photo"
+                     class="rounded-circle shadow"
+                     style="width: 220px; height: 220px; object-fit: cover;">
             </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="fw-bold">Frontend & Mobile</h5>
-              <p class="mb-1">Bootstrap, Tailwind (basic), Angular</p>
-              <p class="mb-0">Flutter</p>
+            <!-- Text -->
+            <div class="col-md-8">
+                <h3 class="fw-bold mb-3">Steve Kamguia</h3>
+                <p class="lead">
+                    I am a <strong>software developer</strong> passionate about
+                    <strong>software engineering, IoT, and automation</strong>.
+                    My journey started with <em>Arduino & C/C++</em> in high school,
+                    then a <strong>Bachelor in Software Engineering (DIT, 2022)</strong>,
+                    and continued through hands-on experiences at
+                    <a class="custom-link" href="https://cinaf.tv/fr/" target="_blank">Cinaf TV</a>
+                    and <a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html" target="_blank">Volkswagen
+                    Infotainment GmbH</a>.
+                </p>
+                <p class="lead mb-0">
+                    I value <strong>clean code, problem solving, and continuous learning</strong> —
+                    always aiming to grow as a developer and as a person.
+                </p>
             </div>
-          </div>
         </div>
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="fw-bold">DevOps & Infrastructure</h5>
-              <p class="mb-1">Docker, GitHub Actions, Cloudflared</p>
-              <p class="mb-0">Kubernetes (basics)</p>
+
+        <!-- Skills -->
+        <div class="mb-5">
+            <h4 class="fw-bold mb-4 text-center title-underline">Skills & Technical Stack</h4>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Programming & Backend</h5>
+                            <p class="mb-1">Python, PHP, C/C++, TypeScript (basic), C# (basic)</p>
+                            <p class="mb-0">Flask, Laravel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Frontend & Mobile</h5>
+                            <p class="mb-1">Bootstrap, Tailwind (basic), Angular</p>
+                            <p class="mb-0">Flutter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">DevOps & Infrastructure</h5>
+                            <p class="mb-1">Docker, GitHub Actions, Cloudflared</p>
+                            <p class="mb-0">Kubernetes (basics)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Embedded & IoT</h5>
+                            <p class="mb-1">Arduino (C/C++)</p>
+                            <p class="mb-0">Automation & IoT projects</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="fw-bold">Embedded & IoT</h5>
-              <p class="mb-1">Arduino (C/C++)</p>
-              <p class="mb-0">Automation & IoT projects</p>
+
+        <!-- Diplomas & Certifications -->
+        <div class="mb-5">
+            <h4 class="fw-bold mb-4 text-center title-underline">Diplomas & Certifications</h4>
+            <div class="row g-4">
+                <!-- Bachelor -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100 text-center p-3">
+                        <img src="{{ url_for('static', filename='images/logo-dit.jpg') }}"
+                             alt="DIT Logo" class="mb-3 rounded-circle shadow-sm"
+                             style="width:60px; height:60px; object-fit:cover;">
+                        <h6 class="fw-bold">Bachelor of Engineering</h6>
+                        <p class="mb-1">Software Engineering –
+                            <a class="custom-link" href="https://douala-it.com/" target="_blank">DIT (2022)</a>
+                        </p>
+                        <p class="text-muted small">
+                            Focus on software design, algorithms, databases and project management.
+                            Graduation project: development of an Android Application for finding lost identity-cards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cisco -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100 text-center p-3">
+                        <img src="{{ url_for('static', filename='images/logo-cisco.png') }}"
+                             alt="Cisco Networking Academy Logo" class="mb-3 rounded-circle shadow-sm"
+                             style="width:60px; height:60px; object-fit:cover;">
+                        <h6 class="fw-bold">Statement of Achievement</h6>
+                        <p class="mb-1">C Essentials 1 –
+                            <a class="custom-link" href="https://www.netacad.com/" target="_blank">Cisco Networking
+                                Academy</a>
+                        </p>
+                        <p class="text-muted small">
+                            Introduction to C programming: control structures, functions, arrays
+                            and fundamental programming concepts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FIPI -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100 text-center p-3">
+                        <img src="{{ url_for('static', filename='images/logo-fipi.jpeg') }}"
+                             alt="FIPI Logo" class="mb-3 rounded-circle shadow-sm"
+                             style="width:60px; height:60px; object-fit:cover;">
+                        <h6 class="fw-bold">Attestations of participation (x3)</h6>
+                        <p class="mb-1">Electronics & Arduino –
+                            <a class="custom-link" href="https://fipi.netlify.app/" target="_blank">FIPI</a>
+                        </p>
+                        <p class="text-muted small">
+                            Training in basic electronics and Arduino programming.
+                            Includes 2 learner certificates and 1 trainer certificate.
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Scrollable Certificates Gallery -->
+            <div class="attestations-gallery mt-4">
+                <h6 class="fw-bold mb-3 text-center">Certificates Preview</h6>
+                <div class="scroll-container">
+                    <img src="{{ url_for('static', filename='images/bachelor-dit.jpg') }}" alt="Bachelor Certificate"
+                         class="cert-img">
+                    <img src="{{ url_for('static', filename='images/cisco-cert.jpg') }}" alt="Cisco Certificate"
+                         class="cert-img">
+                    <img src="{{ url_for('static', filename='images/fipi-cert1.jpg') }}" alt="FIPI Certificate 1"
+                         class="cert-img">
+                    <img src="{{ url_for('static', filename='images/fipi-cert2.jpg') }}" alt="FIPI Certificate 2"
+                         class="cert-img">
+                    <img src="{{ url_for('static', filename='images/fipi-cert3.jpg') }}" alt="FIPI Certificate 3"
+                         class="cert-img">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Diplomas & Certifications -->
-<div class="mb-5">
-  <h4 class="fw-bold mb-4 text-center title-underline">Diplomas & Certifications</h4>
-  <div class="row g-4">
-    <!-- Bachelor -->
-    <div class="col-md-4">
-      <div class="card shadow-sm h-100 text-center p-3">
-        <img src="{{ url_for('static', filename='images/logo-dit.jpg') }}"
-             alt="DIT Logo" class="mb-3 rounded-circle shadow-sm"
-             style="width:60px; height:60px; object-fit:cover;">
-        <h6 class="fw-bold">Bachelor of Engineering</h6>
-        <p class="mb-1">Software Engineering –
-          <a class="custom-link" href="https://douala-it.com/" target="_blank">DIT (2022)</a>
-        </p>
-        <p class="text-muted small">
-          Focus on software design, algorithms, databases and project management.
-          Graduation project: development of a professional translation platform.
-        </p>
-      </div>
-    </div>
-
-    <!-- Cisco -->
-    <div class="col-md-4">
-      <div class="card shadow-sm h-100 text-center p-3">
-        <img src="{{ url_for('static', filename='images/logo-cisco.png') }}"
-             alt="Cisco Networking Academy Logo" class="mb-3 rounded-circle shadow-sm"
-             style="width:60px; height:60px; object-fit:cover;">
-        <h6 class="fw-bold">Statement of Achievement</h6>
-        <p class="mb-1">C Essentials 1 –
-          <a class="custom-link" href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a>
-        </p>
-        <p class="text-muted small">
-          Introduction to C programming: control structures, functions, arrays
-          and fundamental programming concepts.
-        </p>
-      </div>
-    </div>
-
-    <!-- FIPI -->
-    <div class="col-md-4">
-      <div class="card shadow-sm h-100 text-center p-3">
-        <img src="{{ url_for('static', filename='images/logo-fipi.jpeg') }}"
-             alt="FIPI Logo" class="mb-3 rounded-circle shadow-sm"
-             style="width:60px; height:60px; object-fit:cover;">
-        <h6 class="fw-bold">Attestations (x3)</h6>
-        <p class="mb-1">Electronics & Arduino –
-          <a class="custom-link" href="https://fipi.netlify.app/" target="_blank">FIPI</a>
-        </p>
-        <p class="text-muted small">
-          Training in basic electronics and Arduino programming.
-          Includes 2 learner certificates and 1 trainer certificate.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Experience -->
-    <div class="mb-5">
-      <h4 class="fw-bold mb-4 text-center title-underline">Professional Experience</h4>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100 p-3 text-center">
-            <img src="{{ url_for('static', filename='images/logo-cinaf.jpg') }}"
-                 alt="Cinaf TV" class="mb-3 rounded-circle shadow-sm"
-                 style="width:60px; height:60px; object-fit:cover;">
-            <h6 class="fw-bold">Internship – Mobile Development</h6>
-            <p class="mb-0"><a class="custom-link" href="https://cinaf.tv/fr/" target="_blank">Cinaf TV</a></p>
-          </div>
+        <!-- Experience -->
+        <div class="mb-5">
+            <h4 class="fw-bold mb-4 text-center title-underline">Professional Experience</h4>
+            <div class="row g-4">
+                <!-- Cinaf -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 p-3 text-center">
+                        <img src="{{ url_for('static', filename='images/logo-cinaf.jpg') }}"
+                             alt="Cinaf TV" class="mb-3 rounded-circle shadow-sm"
+                             style="width:60px; height:60px; object-fit:cover;">
+                        <h6 class="fw-bold">Internship – Mobile Development</h6>
+                        <p class="mb-1"><a class="custom-link" href="https://cinaf.tv/fr/" target="_blank">Cinaf TV</a>
+                        </p>
+                        <p class="text-muted small">
+                            Mobile App Development with <strong>Flutter</strong> for media & streaming solutions.
+                        </p>
+                    </div>
+                </div>
+                <!-- VW -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 p-3 text-center">
+                        <img src="{{ url_for('static', filename='images/logo-vw.png') }}"
+                             alt="Volkswagen Infotainment" class="mb-3 rounded-circle shadow-sm"
+                             style="width:60px; height:60px; object-fit:cover;">
+                        <h6 class="fw-bold">Apprentice Software Developer</h6>
+                        <p class="mb-1"><a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html"
+                                           target="_blank">Volkswagen Infotainment GmbH (Bochum)</a></p>
+                        <p class="text-muted small">
+                            <strong>Software/tools Development and Software Testing</strong>
+                            for in-car infotainment systems and intern use.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100 p-3 text-center">
-            <img src="{{ url_for('static', filename='images/logo-vw.png') }}"
-                 alt="Volkswagen Infotainment" class="mb-3 rounded-circle shadow-sm"
-                 style="width:60px; height:60px; object-fit:cover;">
-            <h6 class="fw-bold">Apprentice Software Developer</h6>
-            <p class="mb-0"><a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html" target="_blank">Volkswagen Infotainment GmbH (Bochum)</a></p>
-          </div>
+
+        <!-- Projects -->
+        <div class="mb-5 text-center">
+            <h4 class="fw-bold mb-3 title-underline">Projects</h4>
+            <p class="lead">
+                Curious about what I’m currently working on?
+                👉 <a href="{{ url_for('portfolio.projects') }}" class="btn btn-outline-primary fw-bold px-4">Visit my
+                Projects Page</a>
+            </p>
         </div>
-      </div>
+
+
     </div>
-
-    <!-- Projects -->
-    <div class="mb-5 text-center">
-      <h4 class="fw-bold mb-3 title-underline">Projects</h4>
-      <p class="lead">
-        Curious about what I’m currently working on?
-        👉 <a href="{{ url_for('portfolio.projects') }}" class="btn btn-outline-primary fw-bold px-4">Visit my Projects Page</a>
-      </p>
-    </div>
-
-
-  </div>
 </section>
 
 <style>
-.title-underline::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #0d6efd;
-    border-radius: 2px;
-    margin-top: 4px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.card {
-    border: none;
-    border-radius: 1rem;
-    transition: transform 0.2s ease-in-out;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.custom-link {
-    text-decoration: none;
-    color: #212529;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease-in-out;
-}
-.custom-link:hover {
-    color: #0d6efd;
-    border-bottom: 2px solid #0d6efd;
-}
+    .title-underline::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: #0d6efd;
+        border-radius: 2px;
+        margin-top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-link {
+        text-decoration: none;
+        color: #212529;
+        font-weight: 500;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .custom-link:hover {
+        color: #0d6efd;
+        border-bottom: 2px solid #0d6efd;
+    }
+
+    .attestations-gallery {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 6px;
+    }
+
+    .scroll-container {
+        display: inline-flex;
+        gap: 12px;
+    }
+
+    .cert-img {
+        height: 220px;
+        width: 220px;
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .cert-img:hover {
+        transform: scale(1.05);
+    }
+
 </style>
 {% endblock %}
