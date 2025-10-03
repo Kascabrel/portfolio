@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mon Site{% endblock %}</title>
+    <title>{% block title %}Steve Kamguia{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/hero.jpg') }}">
+
 
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,7 +28,7 @@
 <header class="border-bottom">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="text-white container-fluid">
-            <a class="navbar-brand fw-bold" href="#home"><h2>Kascabrel</h2></a>
+            <a class="navbar-brand fw-bold" href="{{url_for('portfolio.home')}}"><h2>Kascabrel</h2></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +38,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active nav-active' if current_page == 'home' else '' }}" aria-current="page"
+                        <a class="nav-link {{ 'active nav-active' if current_page == 'home' else '' }}"
+                           aria-current="page"
                            href="{{url_for('portfolio.home')}}">Home</a>
                     </li>
                     <li class="nav-item">
@@ -77,37 +81,39 @@
 
 <!-- ===== Footer ===== -->
 <footer class="border-top border-1 bg-dark py-4 mt-auto">
-  <div class="container text-white text-center">
+    <div class="container text-white text-center">
 
-    <!-- Contact -->
-    <div class="mb-3">
-      <h5 class="fw-bold mb-3 text-uppercase">Let’s Connect</h5>
-      <div class="d-flex justify-content-center flex-wrap gap-3">
-        <a class="custom-link-footer" href="https://steve-kamguia.kascali.de/" target="_blank">🌐 Portfolio</a>
-        <a class="custom-link-footer" href="https://www.linkedin.com/in/steve-kamguia-144989257/" target="_blank">💼 LinkedIn</a>
-        <a class="custom-link-footer" href="https://github.com/kascabrel" target="_blank">🖥️ GitHub</a>
-      </div>
+        <!-- Contact -->
+        <div class="mb-3">
+            <h5 class="fw-bold mb-3 text-uppercase">Let’s Connect</h5>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a class="custom-link-footer" href="https://steve-kamguia.kascali.de/" target="_blank">🌐 Portfolio</a>
+                <a class="custom-link-footer" href="https://www.linkedin.com/in/steve-kamguia-144989257/"
+                   target="_blank">💼 LinkedIn</a>
+                <a class="custom-link-footer" href="https://github.com/kascabrel" target="_blank">🖥️ GitHub</a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <small class="">&copy; 2025 - Steve Cabrel Kamguia</small>
     </div>
-
-    <!-- Copyright -->
-    <small class="">&copy; 2025 - Steve Cabrel Kamguia</small>
-  </div>
 </footer>
 
 <!-- Custom Footer Styles -->
 <style>
-.custom-link-footer {
-    color: #ffffff;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease, border-bottom 0.2s ease;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-}
-.custom-link-footer:hover {
-    color: #0d6efd;
-    border-bottom: 2px solid #0d6efd;
-}
+    .custom-link-footer {
+        color: #ffffff;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease, border-bottom 0.2s ease;
+        padding-bottom: 2px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .custom-link-footer:hover {
+        color: #0d6efd;
+        border-bottom: 2px solid #0d6efd;
+    }
 </style>
 
 

@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block title %}About{% endblock %}
-
 {% block content %}
 <section id="about" class="py-5 bg-light">
     <div class="container">
@@ -29,17 +27,18 @@
                     I am a <strong>software developer</strong> passionate about
                     <strong>software engineering, IoT, and automation</strong>.
                     My journey started with <em>Arduino & C/C++</em> in high school,
-                    then a <strong>Bachelor in Software Engineering (DIT, 2022)</strong>,
+                    then a <strong>Bachelor in Software Engineering (Douala Higher Institute of Technology, 2022)</strong>,
                     and continued through hands-on experiences at
-                    <a class="custom-link" href="https://cinaf.tv/fr/" target="_blank">Cinaf TV</a>
-                    and <a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html" target="_blank">Volkswagen
-                    Infotainment GmbH</a>.
+                    <a class="custom-link" href="https://www.volkswagen-infotainment.com/de.html" target="_blank">
+                        Volkswagen Infotainment GmbH
+                    </a>.
                 </p>
                 <p class="lead mb-0">
                     I value <strong>clean code, problem solving, and continuous learning</strong> —
                     always aiming to grow as a developer and as a person.
                 </p>
             </div>
+
         </div>
 
         <!-- Skills -->
@@ -77,16 +76,36 @@
                     <div class="card shadow-sm h-100">
                         <div class="card-body">
                             <h5 class="fw-bold">Embedded & IoT</h5>
-                            <p class="mb-1">Arduino (C/C++)</p>
+                            <p class="mb-1">Arduino (C/C++), Grafana</p>
                             <p class="mb-0">Automation & IoT projects</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Protocols</h5>
+                            <p class="mb-1">gRPC, REST APIs, WebSockets</p>
+                            <p class="mb-0">MQTT, TCP/UDP Sockets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Databases</h5>
+                            <p class="mb-1">SQLite, MySQL</p>
+                            <p class="mb-0">PostgreSQL, influxDB</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <!-- Diplomas & Certifications -->
-        <div class="mb-5">
+        <div class="mb-5" id="experience">
             <h4 class="fw-bold mb-4 text-center title-underline">Diplomas & Certifications</h4>
             <div class="row g-4">
                 <!-- Bachelor -->
@@ -146,15 +165,20 @@
             <div class="attestations-gallery mt-4">
                 <h6 class="fw-bold mb-3 text-center">Certificates Preview</h6>
                 <div class="scroll-container">
-                    <img src="{{ url_for('static', filename='images/certification/bachelor-dit.jpg') }}" alt="Bachelor Certificate"
+                    <img src="{{ url_for('static', filename='images/certification/bachelor-dit.jpg') }}"
+                         alt="Bachelor Certificate"
                          class="cert-img">
-                    <img src="{{ url_for('static', filename='images/certification/cisco-cert.jpg') }}" alt="Cisco Certificate"
+                    <img src="{{ url_for('static', filename='images/certification/cisco-cert.jpg') }}"
+                         alt="Cisco Certificate"
                          class="cert-img">
-                    <img src="{{ url_for('static', filename='images/certification/fipi-cert1.jpg') }}" alt="FIPI Certificate 1"
+                    <img src="{{ url_for('static', filename='images/certification/fipi-cert1.jpg') }}"
+                         alt="FIPI Certificate 1"
                          class="cert-img">
-                    <img src="{{ url_for('static', filename='images/certification/fipi-cert2.jpg') }}" alt="FIPI Certificate 2"
+                    <img src="{{ url_for('static', filename='images/certification/fipi-cert2.jpg') }}"
+                         alt="FIPI Certificate 2"
                          class="cert-img">
-                    <img src="{{ url_for('static', filename='images/certification/fipi-cert3.jpg') }}" alt="FIPI Certificate 3"
+                    <img src="{{ url_for('static', filename='images/certification/fipi-cert3.jpg') }}"
+                         alt="FIPI Certificate 3"
                          class="cert-img">
                 </div>
             </div>

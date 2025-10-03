@@ -1,13 +1,132 @@
 {% extends "base.html" %}
-
 {% block content %}
-<div class="text-center mt-5">
-    <h1 class="mb-3">🚧 Work in Progress</h1>
-    <p>My projects are not yet available here, but I'm actively working on them.</p>
-    <p>Stay tuned — exciting things are coming soon! ✨</p>
-    <img src="{{ url_for('static', filename='images/under_construction.png') }}"
-         alt="Under Construction"
-         class="img-fluid mt-4"
-         style="max-width: 300px;">
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Projects I'm Working On</h1>
+    <p class="text-muted text-center mb-4">
+        A curated selection of projects I'm actively building — focused on performance, clean architecture, and scalable
+        design.
+    </p>
+
+    <!-- Category Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="projectTabs" role="tablist">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#webapp">Mobile / Web App</a></li>
+        <li class="nav-item"><a class="nav-link " data-bs-toggle="pill" href="#microservice">Microservice /
+            Backend</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#iot">IoT & Hardware</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#static">Static Website</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="webapp">
+            <div class="card mb-5 border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-5 bg-light d-flex flex-column justify-content-center align-items-center p-4">
+                        <h5 class="fw-bold text-primary text-center mb-3">BK-Witten App — Multiplatform School
+                            Companion</h5>
+                        <img src="{{ url_for('static', filename='images/projects/Pipeline-bk-witten.jpg') }}"
+                             class="img-fluid rounded-3 border border-2 shadow-sm" alt="CI/CD Architecture">
+                        <span class="badge bg-warning text-dark mt-4 px-3 py-2 fs-6">Status: In Progress 🚧</span>
+                    </div>
+                    <div class="col-md-7 bg-white p-4">
+                        <div class="card-body">
+                            <p class="card-text mb-3">
+                                A multiplatform application (web and mobile) designed for students at BK-Witten. It
+                                enables easy access to school-related information such as schedules, announcements, and
+                                personalized updates — all in one unified interface.
+                            </p>
+                            <p class="card-text mb-3">
+                                Built with <span class="fw-semibold text-info">Flutter</span> for cross-platform UI and
+                                <span class="fw-semibold text-primary">Flask</span> as the backend API, the app
+                                integrates a CI/CD pipeline for automated deployment and version control. The
+                                architecture ensures fast iteration and reliable delivery across platforms.
+                            </p>
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item bg-transparent"><strong>Frontend:</strong> Flutter (Web &
+                                    Mobile)
+                                </li>
+                                <li class="list-group-item bg-transparent"><strong>Backend:</strong> Flask</li>
+                                <li class="list-group-item bg-transparent"><strong>DevOps:</strong> GitHub Actions,
+                                    CI/CD, Docker
+                                </li>
+                                <li class="list-group-item bg-transparent"><strong>See the actual state of the Site-web link:</strong> <a
+                                        href="https://bk-witten-web.kascali.de" target="_blank">Click here</a></li>
+                                <li class="list-group-item bg-transparent"><strong>Download the actual state of the apk(it will automatically check for update):</strong> <a
+                                        href="https://bk-witten-app.kascali.de" target="_blank">Click here</a></li>
+
+                            </ul>
+                            <a href="https://github.com/Kascabrel/BK-Witten-App/frontend"
+                               class="btn btn-outline-dark" target="_blank">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microservice Project -->
+        <div class="tab-pane fade show " id="microservice">
+            <div class="card mb-4 shadow-sm shadow-lg rounded-4">
+                <div class="row g-0">
+                    <div class="col-md-5 bg-light d-flex flex-column justify-content-center align-items-center p-4">
+                        <h5 class="fw-bold text-primary text-center mb-3">Microservice Architecture for a Translating
+                            Website</h5>
+                        <img src="{{ url_for('static', filename='images/projects/microservice_architecture.png') }}"
+                             class="img-fluid rounded-3 border border-2 shadow-lg rounded-4"
+                             alt="Microservice Architecture">
+                        <span class="badge bg-success text-dark mt-4 px-3 py-2 fs-6">Status: AuthService & API Gateway ✅</span>
+                        <span class="badge bg-warning text-dark mt-4 px-3 py-2 fs-6">Status: UserService In Progress 🚧</span>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <p class="card-text">
+                                This project is the second iteration of a translating platform. The first version was
+                                built as a monolithic app and faced performance limitations due to sequential processing
+                                and bottlenecks after heavy user input.
+                            </p>
+                            <p class="card-text">
+                                To overcome these issues, the new version adopts a <strong class="text-primary">microservice
+                                architecture</strong> with <strong>Redis caching</strong> and <strong>REST/gRPC
+                                communication</strong> between internal services. Each service is independently scalable
+                                and connected to its own database.
+                            </p>
+                            <p class="card-text">
+                                The system includes an API Gateway, MessagingService, TranslatingService, UserService,
+                                and AuthService. Redis is used to cache frequent queries and reduce latency, especially
+                                for translation results and user sessions.
+                            </p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Framework:</strong> <span
+                                        class="text-info">Flask</span></li>
+                                <li class="list-group-item"><strong>Technologies:</strong> Redis, gRPC, Docker,
+                                    PostgreSQL
+                                </li>
+                                <li class="list-group-item"><strong>Protocols:</strong> REST, gRPC, Redis Pub/Sub</li>
+                            </ul>
+                            <a href="https://github.com/Kascabrel/fya_monorepo/"
+                               class="btn btn-outline-dark" target="_blank">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Placeholder Sections -->
+        {% for section in ['iot', 'static'] %}
+        <div class="tab-pane fade" id="{{ section }}">
+            <div class="card mb-4 shadow-sm shadow-lg rounded-4">
+                <p class="text-muted  m-3">Projects coming soon…</p>
+                <p class="m-3">I'm actively working on new ideas in this category. Stay tuned for updates and
+                    releases.</p>
+                <img src="{{ url_for('static', filename='images/under_construction.png') }}"
+                     alt="Under Construction"
+                     class="img-fluid mt-4"
+                     style="max-width: 300px;">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
